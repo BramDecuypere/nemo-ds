@@ -10,17 +10,18 @@
   "unpkg": "dist/nemo-ds/nemo-ds.esm.js",
   "exports": {
     ".": {
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/nemo-ds/nemo-ds.esm.js",
       "require": "./dist/nemo-ds/nemo-ds.cjs.js"
     },
     "./my-component": {
-      "import": "./dist/components/my-component.js",
-      "types": "./dist/components/my-component.d.ts"
+      "types": "./dist/components/my-component.d.ts",
+      "import": "./dist/components/my-component.js"
     },
     "./loader": {
+      "types": "./loader/index.d.ts",
       "import": "./loader/index.js",
-      "require": "./loader/index.cjs",
-      "types": "./loader/index.d.ts"
+      "require": "./loader/index.cjs"
     }
   },
   "repository": {
@@ -39,8 +40,9 @@
     "generate": "stencil generate"
   },
   "devDependencies": {
+    "@stencil/angular-output-target": "^1.4.0",
     "@stencil/core": "^4.27.1 || ^5.0.0-0",
-    "@stencil/vitest": "^1.8.3",
+    "@stencil/vitest": "1.12.1",
     "@types/node": "^22.13.5",
     "@vitest/browser-playwright": "^4.0.0",
     "playwright": "^1.52.0",
